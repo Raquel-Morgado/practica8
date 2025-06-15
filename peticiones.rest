@@ -1,0 +1,227 @@
+@host = http://localhost:3000
+
+##############################
+#          POSTS             #
+##############################
+
+# Obtener todos los posts
+GET {{host}}/api/posts
+
+###
+
+# Obtener un post en particular (id=1)
+GET {{host}}/api/posts/1
+
+###
+
+# Obtener todos los posts de un autor (autorId=1)
+GET {{host}}/api/posts/autor/1
+
+###
+
+# Obtener posts paginados (página 2, límite 3)
+GET {{host}}/api/posts?page=2&limit=3
+
+###
+
+# Crear post 1
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Cien Años de Soledad",
+  "descripcion": "Una de las mejores novelas latinoamericanas.",
+  "categoria": "Novela",
+  "autores_id": 1
+}
+
+###
+
+# Crear post 2
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "El Amor en los Tiempos del Cólera",
+  "descripcion": "Una hermosa relación de amor maduro.",
+  "categoria": "Novela",
+  "autores_id": 1
+}
+
+###
+
+# Crear post 3
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Casa Tomada",
+  "descripcion": "Cuento corto de Cortázar.",
+  "categoria": "Cuento",
+  "autores_id": 2
+}
+
+###
+
+# Crear post 4
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Bestiario",
+  "descripcion": "Relatos de lo fantástico.",
+  "categoria": "Cuento",
+  "autores_id": 2
+}
+
+###
+
+# Crear post 5
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "La Fiesta del Chivo",
+  "descripcion": "Una de las mejores novelas de Vargas Llosa.",
+  "categoria": "Novela",
+  "autores_id": 3
+}
+
+###
+
+# Crear post 6
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "De la Selva al Cielo",
+  "descripcion": "Relato de Allende.",
+  "categoria": "Cuento",
+  "autores_id": 4
+}
+
+###
+
+# Crear post 7
+POST {{host}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "Poemas de Neruda",
+  "descripcion": "Antología poética.",
+  "categoria": "Poesía",
+  "autores_id": 5
+}
+
+###
+
+# Actualizar un post (id=1)
+PUT {{host}}/api/posts/1
+Content-Type: application/json
+
+{
+  "titulo": "Cien Años de Soledad (Edición revisada)", 
+  "descripcion": "Una de las mejores novelas latinoamericanas, revisada.", 
+  "categoria": "Novela"
+}
+
+###
+
+# Eliminar un post (id=7)
+DELETE {{host}}/api/posts/7
+
+###
+
+##############################
+#          AUTORES           #
+##############################
+
+# Obtener todos los autores
+GET {{host}}/api/autores
+
+###
+
+# Obtener autores paginados (página 2, límite 3)
+GET {{host}}/api/autores?page=2&limit=3
+
+###
+
+# Obtener un autor en particular (id=1)
+GET {{host}}/api/autores/1
+
+###
+
+# Crear autor 1
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Gabriel García Márquez",
+  "email": "gmarquez@example.com",
+  "imagen": "https://picsum.photos/seed/autor1/500/500"
+}
+
+###
+
+# Crear autor 2
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Julio Cortázar",
+  "email": "jcortazar@example.com",
+  "imagen": "https://picsum.photos/seed/autor2/500/500"
+}
+
+###
+
+# Crear autor 3
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Mario Vargas Llosa",
+  "email": "mvargas@example.com",
+  "imagen": "https://picsum.photos/seed/autor3/500/500"
+}
+
+###
+
+# Crear autor 4
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Isabel Allende",
+  "email": "iallende@example.com",
+  "imagen": "https://picsum.photos/seed/autor4/500/500"
+}
+
+###
+
+# Crear autor 5
+POST {{host}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Pablo Neruda",
+  "email": "pneruda@example.com",
+  "imagen": "https://picsum.photos/seed/autor5/500/500"
+}
+
+###
+
+# Actualizar un autor (id=1)
+PUT {{host}}/api/autores/1
+Content-Type: application/json
+
+{
+  "nombre": "Gabriel G. Márquez",
+  "email": "gmarquez_new@example.com",
+  "imagen": "https://picsum.photos/seed/autor6/500/500"
+}
+
+###
+
+# Eliminar un autor (id=5)
+DELETE {{host}}/api/autores/5
